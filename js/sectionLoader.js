@@ -64,6 +64,11 @@ class SectionLoader {
         toggle.textContent = "⌃";
         toggle.classList.remove("down-caret");
         toggle.classList.add("up-caret");
+
+        // Track project expansion
+        if (window.trackProjectExpansion) {
+          window.trackProjectExpansion(id);
+        }
       }
     };
 
