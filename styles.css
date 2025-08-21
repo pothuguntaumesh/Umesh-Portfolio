@@ -1,0 +1,664 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Nata+Sans:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Nata+Sans:wght@100..900&display=swap");
+
+/* ===== BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* ===== REUSABLE COMPONENTS ===== */
+.section {
+  margin-top: 3rem;
+  width: 100%;
+  color: black;
+  opacity: 0.8;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.list-styled {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.list-item {
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+.clickable {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.clickable:hover {
+  color: #333;
+}
+
+.blue-link {
+  color: blue;
+  text-decoration: underline;
+}
+
+.blue-link:hover {
+  color: darkblue;
+}
+
+.text-content {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: black;
+}
+
+/* ===== LAYOUT ===== */
+.main-container {
+  margin-top: 30px;
+  width: 40%;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+/* ===== NAVIGATION ===== */
+#nav {
+  width: 100%;
+  height: auto;
+  margin-top: 25px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  border: 2px solid #333;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.logo:hover {
+  background-color: #333;
+  color: white;
+}
+
+.nav-links {
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-links > li {
+  list-style-type: none;
+}
+
+.nav-links > li > a {
+  color: gray;
+  text-decoration: none;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  margin-top: 3rem;
+  width: 100%;
+  color: black;
+  opacity: 0.8;
+}
+
+.hero-section-text {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: black;
+}
+
+.blinking-dot {
+  animation: blink 1s infinite;
+}
+
+/* ===== PROJECT COMPONENTS ===== */
+.project-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-title {
+  flex: 1;
+}
+
+.show-more {
+  color: blue;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  padding: 2px 4px;
+  border-radius: 2px;
+  transition: all 0.15s ease;
+  font-weight: bold;
+  vertical-align: middle;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.show-more:hover {
+  color: darkblue;
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.down-caret {
+  font-size: 1.3rem;
+  transform: scaleY(1.1);
+}
+
+.up-caret {
+  font-size: 1.1rem;
+}
+
+.project-details {
+  display: none;
+  margin-top: 0.8rem;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-left: 3px solid blue;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.project-story {
+  margin-bottom: 1.5rem;
+}
+
+.project-story h5,
+.project-tech h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.project-story p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #bbdefb;
+}
+
+/* ===== PERSONAL CARDS ===== */
+.personal-cards {
+  margin-top: 3rem;
+}
+
+.personal-card {
+  border: 1px solid #e0e0e0;
+  margin-bottom: 8px;
+  background-color: #f5f5f5;
+  transition: all 0.2s ease;
+}
+
+.personal-card:hover {
+  border-color: #ccc;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.card-title {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+
+.card-toggle {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #666;
+  text-decoration: underline;
+}
+
+.card-content {
+  display: none;
+  padding: 0 20px 20px 20px;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.card-content p {
+  margin: 0;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  margin-top: 2rem;
+  padding: 20px 0;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e0e0e0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.footer-content {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.up-arrow {
+  animation: bounce 1.5s ease-in-out infinite;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes blink {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ===== SECTION APPLICATIONS ===== */
+.achievement,
+.projects,
+.professional-experience,
+.other-projects {
+  margin-top: 3rem;
+  width: 100%;
+  color: black;
+  opacity: 0.8;
+}
+
+.achievement h4,
+.projects h4,
+.professional-experience h4,
+.other-projects h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.achievement-list,
+.projects-list,
+.experience-list,
+.other-projects-list {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.achievement-list > li,
+.projects-list > li,
+.experience-list > li,
+.other-projects-list > li {
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+.directory {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  color: black;
+  opacity: 0.8;
+}
+
+.directory h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.directory-list {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  list-style-type: disc;
+}
+
+.directory-list > li {
+  margin-top: 0.3rem;
+}
+
+.directory-list a {
+  color: blue;
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+
+.directory-list a:hover {
+  color: darkblue;
+}
+
+.tag-line {
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: black;
+  opacity: 0.8;
+}
+
+.TLDR {
+  margin-top: 3rem;
+  width: 100%;
+  color: black;
+  opacity: 0.8;
+}
+
+.TLDR h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.TLDR p {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: black;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* ===== CLICKABLE ELEMENTS ===== */
+.footer-name,
+.footer-arrow,
+.up-arrow {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer-name:hover,
+.footer-arrow:hover,
+.up-arrow:hover {
+  color: #333;
+}
+
+.footer-logo {
+  font-weight: 600;
+  color: #333;
+  border: 1px solid #333;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-size: 0.7rem;
+  margin-right: 8px;
+}
+
+/* ===== EXPERIENCE SPECIFIC STYLES ===== */
+.experience-entry {
+  margin-top: 2rem;
+}
+
+.experience-entry:first-child {
+  margin-top: 1.5rem;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.experience-company {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.experience-dates {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.experience-role {
+  font-size: 0.95rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.experience-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.experience-summary p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  flex: 1;
+}
+
+.experience-points {
+  margin-bottom: 1.5rem;
+}
+
+.experience-points ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.experience-points li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ===== CONTACT PAGE LAYOUT ===== */
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-page .footer {
+  margin-top: auto;
+}
+
+/* ===== CONTACT FORM STYLES ===== */
+.contact {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  color: black;
+  opacity: 0.8;
+}
+
+.contact h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 1rem 0;
+}
+
+.contact-intro {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background-color: #f9f9f9;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #333;
+  background-color: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  background: linear-gradient(45deg, #87ceeb, #00bfff);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+  min-width: 120px;
+  margin-bottom: 3rem;
+}
+
+.submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 191, 255, 0.3);
+}
+
+.form-footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.powered-by {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.powered-by a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.direct-contact h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.5px;
+}
+
+.email-direct {
+  font-size: 0.95rem;
+  color: #555;
+  font-family: "Courier New", monospace;
+  background-color: #f5f5f5;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* ===== GLOBAL LINK STYLES ===== */
+a {
+  color: blue;
+}

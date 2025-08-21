@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Umesh Pothugunta</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <nav id="nav">
+        <a href="/" class="logo">UP</a>
+        <ul class="nav-links">
+          <li><a href="#">CONTACT</a></li>
+          <li><a href="#">GITHUB</a></li>
+          <li><a href="#">LINKEDIN</a></li>
+        </ul>
+      </nav>
+      <div class="hero-section">
+        <h2>HEY, I'M UMESH<span class="blinking-dot"> .</span></h2>
+        <p class="hero-section-text">
+          I like building tools that make life easier. Sometimes they scale.
+          Sometimes they crash. I learn either way.I build with purpose. Every
+          project starts with a problem that bothers me enough to fix, for
+          myself first, then for everyone else.
+        </p>
+      </div>
+      <div class="achievement">
+        <h4>A FEW ACHIEVEMENTS</h4>
+        <ul class="achievement-list">
+          <li>
+            launched an ai-powered job tracker (growly.fyi) with 200+ beta
+            signups in week 1
+          </li>
+          <li>earned $5k+ in aws & azure startup credits</li>
+          <li>
+            built a discord bot used by 1,000+ students to learn
+            programming(funded by google)
+          </li>
+          <li>
+            shipped voice-feedback infra for shopify merchants in 3 days as a
+            part of hackathon
+            <a href="">(telora)</a>
+          </li>
+        </ul>
+      </div>
+      <div class="projects">
+        <h4>SOME OF MY PROJECTS</h4>
+        <ul class="projects-list">
+          <li>
+            <div class="project-item">
+              <span class="project-title"
+                ><a href="">growly</a> – tracking job applications using
+                AI</span
+              >
+              <span
+                class="show-more down-caret"
+                onclick="toggleDetails('project1')"
+                >⌄</span
+              >
+            </div>
+            <div class="project-details" id="project1">
+              <div class="project-story">
+                <p>
+                  While applying for jobs, I kept losing track of where and when
+                  I’d applied, missing follow-ups and letting opportunities slip
+                  through. I built Growly to solve this,an AI-powered platform
+                  that connects to Gmail, identifies job-related emails, and
+                  organizes them into a live dashboard with status tracking. The
+                  system uses LLMs to filter and classify applications, helping
+                  users stay on top of deadlines and priorities. In its first
+                  week, it attracted 200+ beta users and earned AWS & Azure
+                  startup credits, validating both the need and the approach.
+                </p>
+              </div>
+              <div class="project-tech">
+                <h5>Tech Stack</h5>
+                <div class="tech-tags">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">SpringBoot</span>
+                  <span class="tech-tag">Concurrency</span>
+                  <span class="tech-tag">Multi-Threading</span>
+                  <span class="tech-tag">AWS SQS</span>
+                  <span class="tech-tag">OpenAI API</span>
+                  <span class="tech-tag">AWS RDS</span>
+                  <span class="tech-tag">AWS EC2</span>
+                  <span class="tech-tag">AWS S3</span>
+                  <span class="tech-tag">Tailwind CSS</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="project-item">
+              <span class="project-title"
+                >analogy connector (Research@UMD) – connecting cross-domain
+                researchers using LLMs</span
+              >
+              <span
+                class="show-more down-caret"
+                onclick="toggleDetails('project2')"
+                >⌄</span
+              >
+            </div>
+            <div class="project-details" id="project2">
+              <div class="project-story">
+                <p>
+                  During my time as a GenAI Research Engineer at UMD, I
+                  collaborated with PhD students, professors, and researchers on
+                  Analogy Connector, a platform designed to help people in
+                  different domains who are working on analogous research find
+                  each other. We used LLMs to analyze and connect research
+                  papers across disciplines, surfacing unexpected parallels and
+                  related concepts. The aim was to break down academic silos,
+                  enabling researchers to discover collaborators and inspiration
+                  from fields they might not otherwise explore, ultimately
+                  accelerating innovation.
+                </p>
+              </div>
+              <div class="project-tech">
+                <h5>Tech Stack</h5>
+                <div class="tech-tags">
+                  <span class="tech-tag">Next.js</span>
+                  <span class="tech-tag">Flask</span>
+                  <span class="tech-tag">OpenAI API</span>
+                  <span class="tech-tag">MongoDB</span>
+                  <span class="tech-tag">ElasticSearch</span>
+                  <span class="tech-tag">Web Scraping</span>
+                  <span class="tech-tag">AWS</span>
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">Linux</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="project-item">
+              <span class="project-title"
+                >codegenbot – helping students learn, not cheat</span
+              >
+              <span
+                class="show-more down-caret"
+                onclick="toggleDetails('project3')"
+                >⌄</span
+              >
+            </div>
+            <div class="project-details" id="project3">
+              <div class="project-story">
+                <p>
+                  As a Graduate Assistant at UMD on a Google-funded project, I
+                  was tasked with creating a tool to help students with
+                  programming assignments without simply giving them the
+                  answers. I developed CodeGenBot, a Discord-based assistant
+                  that uses prompt engineering, retrieval-augmented generation
+                  (RAG), and policy guardrails to provide hints, explain
+                  concepts, and guide students toward solutions while
+                  maintaining academic integrity. It integrates course materials
+                  via a vector search backend, retrieves relevant snippets, and
+                  combines them with structured prompts to generate targeted
+                  guidance. It now supports over 1,000 students, fostering real
+                  learning rather than copy-paste dependency.
+                </p>
+              </div>
+              <div class="project-tech">
+                <h5>Tech Stack</h5>
+                <div class="tech-tags">
+                  <span class="tech-tag">Discord</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">LLM's</span>
+                  <span class="tech-tag">RAG</span>
+                  <span class="tech-tag">Prompt Engineering</span>
+                  <span class="tech-tag">Gemini API</span>
+                  <span class="tech-tag">MYSQL</span>
+                  <span class="tech-tag">AWS EC2</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="project-item">
+              <span class="project-title"
+                ><a href="">telora </a> – AI voice feedback for Shopify
+                purchases</span
+              >
+              <span
+                class="show-more down-caret"
+                onclick="toggleDetails('project4')"
+                >⌄</span
+              >
+            </div>
+            <div class="project-details" id="project4">
+              <div class="project-story">
+                <p>
+                  Telora was born out of a hackathon challenge to build
+                  something meaningful using voice AI agents. I decided to focus
+                  on post-purchase customer feedback, a step that many merchants
+                  overlook but that’s critical for improving products and
+                  retaining customers. I built an AI-powered voice agent that
+                  integrates directly with Shopify, automatically calling
+                  customers after their online or offline purchases. The agent
+                  collects spoken feedback and reviews in natural conversations,
+                  then processes and organizes them into a clean dashboard.
+                  Merchants can instantly see sentiment, highlights, and
+                  actionable points without digging through raw recordings,
+                  making it easy to turn customer voices into improvements and
+                  public reviews.
+                </p>
+              </div>
+              <div class="project-tech">
+                <h5>Tech Stack</h5>
+                <div class="tech-tags">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">Shopify API</span>
+                  <span class="tech-tag">VAPI</span>
+                  <span class="tech-tag">Voice Agents</span>
+                  <span class="tech-tag">Supabase</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">Twilio</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="project-item">
+              <span class="project-title"
+                ><a href="">early apply </a>– instant job alerts from your
+                target companies</span
+              >
+              <span
+                class="show-more down-caret"
+                onclick="toggleDetails('project5')"
+                >⌄</span
+              >
+            </div>
+            <div class="project-details" id="project5">
+              <div class="project-story">
+                <p>
+                  When I began applying for jobs, I quickly realized that in
+                  today’s competitive market, timing is critical, the earlier
+                  you apply, the higher your chances of being noticed before the
+                  role gets saturated with applicants. To give myself an edge, I
+                  built Early Apply, an internal job board that scrapes postings
+                  directly from multiple ATS platforms for the specific
+                  companies and roles I’m targeting. The system checks every 15
+                  minutes and instantly emails me when a match is found,
+                  ensuring I can apply within minutes of a job going live.
+                </p>
+              </div>
+              <div class="project-tech">
+                <h5>Tech Stack</h5>
+                <div class="tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">playwright </span>
+                  <span class="tech-tag">Scraping</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">AWS SES</span>
+                  <span class="tech-tag">AWS EventBridge</span>
+                  <span class="tech-tag">AWS Lambda</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="TLDR">
+        <h4>TL;DR:</h4>
+        <p>
+          I started building to solve my own problems, from tracking job
+          applications to helping students learn better.
+          <br />
+          <br />
+          Along the way, I’ve launched AI tools, voice platforms, and research
+          projects that others asked to use too. I care about shipping fast,
+          learning faster, and making things that actually matter.
+        </p>
+      </div>
+
+      <div class="personal-cards">
+        <div class="personal-card">
+          <div class="card-header" onclick="toggleCard('card1')">
+            <span class="card-title">HOW I STARTED</span>
+            <span class="card-toggle">OPEN</span>
+          </div>
+          <div class="card-content" id="card1">
+            <p>
+              I got my start in college. My first programming course humbled me; I earned a C. Instead of treating that as a ceiling, I treated it as a starting point. I taught myself after class, built small tools to save time, and kept moving from tiny scripts to simple web apps that actually helped me day to day.
+              <br>
+              <br>  
+              In my final year I joined a small startup and learned what it means to build for real people on real timelines. That experience pushed me to keep going. I came to the US for grad school and kept turning personal problems into products: a job-application tracker when my search got messy, a learning assistant that guides students instead of giving answers, a voice-based feedback tool for merchants, and a project that helps researchers in different fields find each other.
+              <br>
+              <br>
+              My approach is straightforward. Notice a problem that matters, talk to the people who feel it, ship a minimal version, then improve it until it earns its place. That’s how I started, and it’s how I still work.
+            </p>
+          </div>
+        </div>
+
+        <div class="personal-card">
+          <div class="card-header" onclick="toggleCard('card2')">
+            <span class="card-title">MY GOAL</span>
+            <span class="card-toggle">OPEN</span>
+          </div>
+          <div class="card-content" id="card2">
+            <p>
+              To build tools that make people's lives genuinely easier, not just
+              add to the noise. I want to create software that people actually
+              use, not because they have to, but because it solves a real
+              problem they didn't know they could fix. Every project should
+              start with "this bothers me" and end with "this helps others."
+            </p>
+          </div>
+        </div>
+
+        <div class="personal-card">
+          <div class="card-header" onclick="toggleCard('card3')">
+            <span class="card-title">MY MOTIVATIONS</span>
+            <span class="card-toggle">OPEN</span>
+          </div>
+          <div class="card-content" id="card3">
+            <p>
+              I’m driven by the gap between "how things are" and "how they could be." I look for friction, turn it into a clear problem statement, and build the simplest thing that measurably improves it. I care about usefulness, reliability, and respect for users, with privacy by default, clarity over flash, and outcomes over demos. My bias is to ship, learn from real usage, and iterate quickly while raising the quality bar each cycle. I’m motivated by work that compounds, by tools that save time, deepen understanding, and quietly make the everyday better.
+            </p>
+          </div>
+        </div>
+
+      
+      <div class="professional-experience">
+        <h4>PROFESSIONAL EXPERIENCE</h4>
+        
+        <div class="experience-entry">
+          <div class="experience-header">
+            <span class="experience-company">University of Maryland, College Park</span>
+            <span class="experience-dates">Jan 2024 - May 2025</span>
+          </div>
+          <div class="experience-role">GenAI Research Engineer & Graduate Assistant</div>
+          <div class="experience-summary">
+            <p>Led development of AI-powered research platforms as part of a multi-disciplinary team at UMD. Built Analogy Connector using LLMs to identify research parallels across academic domains and created CodeGenBot, a Discord-based educational assistant serving 1,000+ students. Collaborated with PhD students, professors, and researchers to translate complex AI concepts into practical tools while maintaining academic integrity. Secured Google funding for educational AI initiatives, demonstrating measurable impact in both research innovation and student learning outcomes.</p>
+            <span class="show-more down-caret" onclick="toggleDetails('exp1')">⌄</span>
+          </div>
+          <div class="project-details" id="exp1">
+            <div class="experience-points">
+              <ul>
+                <li>Led development of Analogy Connector, an AI platform connecting cross-domain researchers using LLMs to identify research parallels</li>
+                <li>Collaborated with PhD students and professors to break down academic silos and accelerate innovation through unexpected research connections</li>
+                <li>Created CodeGenBot, a Discord-based AI assistant helping 1,000+ students learn programming without compromising academic integrity</li>
+                <li>Implemented RAG systems, prompt engineering, and policy guardrails to provide educational guidance rather than direct answers</li>
+                <li>Secured Google funding for educational AI initiatives, demonstrating real-world impact and scalability</li>
+              </ul>
+            </div>
+            <div class="project-tech">
+              <h5>Tech Stack</h5>
+              <div class="tech-tags">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">OpenAI API</span>
+                <span class="tech-tag">Gemini API</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">ElasticSearch</span>
+                <span class="tech-tag">Discord Bot Development</span>
+                <span class="tech-tag">RAG</span>
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">CI/CD</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-entry">
+          <div class="experience-header">
+            <span class="experience-company">Cashfree Payments</span>
+            <span class="experience-dates">Jan 2022 - Jul 2023</span>
+          </div>
+          <div class="experience-role">Software Engineer</div>
+          <div class="experience-summary">
+            <p>Engineered scalable fintech systems at Cashfree Payments, contributing to the subscription payments platform that processed UPI, e-mandate, and card transactions in real time. Built resilient backend services and optimized performance through Redis caching, Kubernetes deployments, and latency-reduction strategies. Strengthened platform security by contributing to an edge gateway for request validation and JWT checks, while driving reliability through CI/CD automation, monitoring, and code reviews. Delivered solutions that reduced payment failures and improved transaction success rates, directly impacting merchant revenue and customer experience.</p>
+            <span class="show-more down-caret" onclick="toggleDetails('exp2')">⌄</span>
+          </div>
+          <div class="project-details" id="exp2">
+            <div class="experience-points">
+              <ul>
+                <li>Designed and developed backend for QR code and card payments in a subscription system, enabling secure processing across three payment options while reducing failure rates by 20% and enhancing user experience.</li>
+                <li>Implemented a Redis-based caching solution for card BIN retrieval, reducing API call latency and ensuring scalability through Kubernetes-based deployment.</li>
+                <li>Contributed to a Golang-based edge gateway responsible for initial request validation, including JWT checks and routing to appropriate microservices, ensuring secure and efficient request handling across the system.</li>
+                <li>Reviewed and merged 50+ pull requests to uphold code quality and best practices, deployed updates using Jenkins, and utilized Grafana for monitoring deployments to ensure system reliability and performance.</li>
+                <li>Contributed over 200 unit tests using JUnit within a Maven-managed build environment, enhancing code reliability and quality through best practices in test automation and continuous integration.</li>
+                <li>Created transaction simulators in a gamma environment using Spring Boot, which was essential in helping merchants integrate REST APIs and expediting testing processes.</li>
+                <li>Engineered 20+ backend APIs with Spring Boot, leveraging SQL databases for efficient data management and performance in handling large transaction volumes, contributing to a 50% growth in merchant adoption.</li>
+              </ul>
+            </div>
+            <div class="project-tech">
+              <h5>Tech Stack</h5>
+              <div class="tech-tags">
+                <span class="tech-tag">Golang</span>
+                <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">Redis</span>
+                <span class="tech-tag">Kubernetes</span>
+                <span class="tech-tag">JWT</span>
+                <span class="tech-tag">Jenkins</span>
+                <span class="tech-tag">Grafana</span>
+                <span class="tech-tag">JUnit</span>
+                <span class="tech-tag">Maven</span>
+                <span class="tech-tag">REST APIs</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Microservices</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="other-projects">
+        <h4>FEW OTHER PROJECTS</h4>
+        <ul class="other-projects-list">
+          <li>
+            <div class="project-item">
+              <span class="project-title"
+                >nesh – AI-powered chrome extension for seamless text assistance</span
+              >
+              <span
+                class="show-more down-caret"
+                onclick="toggleDetails('other1')"
+                >⌄</span
+              >
+            </div>
+            <div class="project-details" id="other1">
+              <div class="project-story">
+                <p>
+                  Built Nesh as a Chrome extension to revolutionize how we interact with text on the web using LLMs. Simply typing /nesh in any text field invokes AI assistance, while right-clicking provides options to rewrite, improve, or generate content. The vision is to make it context-aware – able to see what you see and instantly guide you in doing things or fixing whatever you need on websites just by prompting it. Currently working to open source this project so everyone can use and help develop it, making AI assistance truly ubiquitous across the web.
+                </p>
+              </div>
+              <div class="project-tech">
+                <h5>Tech Stack</h5>
+                <div class="tech-tags">
+                  <span class="tech-tag">Chrome Extension API</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">LLM APIs</span>
+                  <span class="tech-tag">Context Injection</span>
+                  <span class="tech-tag">DOM Manipulation</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="project-item">
+              <span class="project-title"
+                >clearhold – compliance checker for financial advisors</span
+              >
+              <span
+                class="show-more down-caret"
+                onclick="toggleDetails('other2')"
+                >⌄</span
+              >
+            </div>
+            <div class="project-details" id="other2">
+              <div class="project-story">
+                <p>
+                  Created ClearHold for a friend who needed a solution to check compliance for social media posts. This tool is specifically designed for Independent Financial Advisors and Independent Insurance Agents to verify that their content adheres to regulatory compliance requirements. The platform analyzes social media posts and flags potential compliance issues before they're published, helping professionals maintain their licenses while engaging effectively with clients on social platforms. Currently in development to ensure comprehensive coverage of financial services regulations.
+                </p>
+              </div>
+              <div class="project-tech">
+                <h5>Tech Stack</h5>
+                <div class="tech-tags">
+                  <span class="tech-tag">AI/ML</span>
+                  <span class="tech-tag">NLP</span>
+                  <span class="tech-tag">Compliance Rules Engine</span>
+                  <span class="tech-tag">Text Analysis</span>
+                  <span class="tech-tag">Regulatory APIs</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="project-item">
+              <span class="project-title"
+                >kanban board – task management with drag-and-drop interface</span
+              >
+              <span
+                class="show-more down-caret"
+                onclick="toggleDetails('other3')"
+                >⌄</span
+              >
+            </div>
+            <div class="project-details" id="other3">
+              <div class="project-story">
+                <p>
+                  Built this Kanban board as part of my journey through Frontend Mentor challenges, where I solved most of the available challenges to master Frontend Development. This was during my early learning phase when I was focused on understanding modern frontend development patterns. The project features a complete task management system with intuitive drag-and-drop functionality, multiple board states, and a clean, responsive design. It represents a milestone in my frontend development skills and my commitment to learning through practical, hands-on projects.
+                </p>
+              </div>
+              <div class="project-tech">
+                <h5>Tech Stack</h5>
+                <div class="tech-tags">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">Drag & Drop API</span>
+                  <span class="tech-tag">Local Storage</span>
+                  <span class="tech-tag">Responsive Design</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="project-item">
+              <span class="project-title"
+                >knights tour visualizer – my first coding project journey</span
+              >
+              <span
+                class="show-more down-caret"
+                onclick="toggleDetails('other4')"
+                >⌄</span
+              >
+            </div>
+            <div class="project-details" id="other4">
+              <div class="project-story">
+                <p>
+                  This holds a special place as my very first project, built almost 5 years ago when I was learning Python from YouTube tutorials. I had just discovered backtracking algorithms and was inspired by someone's Sudoku solver video, but I wanted to create something original that wasn't already out there. The Knights Tour problem fascinated me – the challenge of moving a knight across a chessboard visiting every square exactly once. I built a real-time visualizer using Python's Turtle module that shows the knight's movements as it explores the board, backtracking when it hits dead ends. It was my first taste of bringing algorithms to life visually.
+                </p>
+              </div>
+              <div class="project-tech">
+                <h5>Tech Stack</h5>
+                <div class="tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Turtle Graphics</span>
+                  <span class="tech-tag">Backtracking Algorithm</span>
+                  <span class="tech-tag">Real-time Visualization</span>
+                  <span class="tech-tag">Recursion</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="directory">
+        <h4>DIRECTORY:</h4>
+        <ul class="directory-list">
+          <li><a href="#contact">contact</a></li>
+          <li>
+            <a href="https://github.com/yourusername" target="_blank">github</a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"
+              >linkedin</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <span class="footer-text"
+          >© 2025
+          <span class="footer-name" onclick="scrollToTop()"
+            >UMESH POTHUGUNTA</span
+          >
+          <span class="up-arrow" onclick="scrollToTop()">↑</span></span
+        >
+        <span class="footer-arrow" onclick="scrollToTop()"
+          ><span class="footer-logo">UP</span> BY
+          <span class="footer-name">UMESH</span>®</span
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
