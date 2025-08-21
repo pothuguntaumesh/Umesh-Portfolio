@@ -39,6 +39,40 @@ class ContactLoader {
     window.scrollToTop = function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
+
+    // Check for success parameter and show success message
+    this.checkForSuccess();
+  }
+
+  checkForSuccess() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("success") === "true") {
+      this.showSuccessMessage();
+      // Clean URL
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  }
+
+  showSuccessMessage() {
+    // Create success message
+    const successDiv = document.createElement("div");
+    successDiv.className = "success-message";
+    successDiv.innerHTML = `
+      <div class="success-content">
+        <h3>Message Sent!</h3>
+        <p>Thank you for reaching out. I'll get back to you soon.</p>
+      </div>
+    `;
+
+    // Insert at the top of contact section
+    const contactSection = document.querySelector(".contact");
+    contactSection.insertBefore(successDiv, contactSection.firstChild);
+
+    // Remove after 5 seconds
+    setTimeout(() => {
+      successDiv.style.opacity = "0";
+      setTimeout(() => successDiv.remove(), 300);
+    }, 5000);
   }
 }
 
