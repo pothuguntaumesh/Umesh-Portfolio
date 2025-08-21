@@ -690,6 +690,28 @@
   font-size: 0.95rem;
 }
 
+/* Error message styles */
+.error-message {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  transition: opacity 0.3s ease;
+}
+
+.error-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.error-content p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
 /* ===== LOADING STYLES ===== */
 .loading-container {
   position: fixed;
