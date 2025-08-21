@@ -37,6 +37,10 @@ class SectionLoader {
 
     // Initialize interactive features after all sections are loaded
     this.initializeInteractivity();
+
+    // Hide loading indicator and show content
+    document.getElementById("loading").style.display = "none";
+    document.querySelector(".main-container").style.visibility = "visible";
   }
 
   initializeInteractivity() {
