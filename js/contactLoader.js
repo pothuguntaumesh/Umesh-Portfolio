@@ -73,10 +73,6 @@ class ContactLoader {
       if (response.ok) {
         this.showSuccessMessage();
         form.reset(); // Clear the form
-        // Track successful form submission
-        if (window.trackFormSubmission) {
-          window.trackFormSubmission("contact");
-        }
       } else {
         throw new Error("Submission failed");
       }
